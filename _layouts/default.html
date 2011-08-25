@@ -9,6 +9,13 @@
 
     <p>{{ content }}</p>
     <p>
+      {% for post in site.posts limit:5 %}
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          {{ post.content }}
+        <em>Posted on {{ post.date | date_to_long_string }}.</em>
+      {% endfor %}
+    </p>
+    <p>
       <a href="{{ page.url }}#disqus_thread">View Comments</a>
       <div id="disqus_thread"></div>
       <script type="text/javascript" src="http://disqus.com/forums/lipscombe/embed.js"></script>
