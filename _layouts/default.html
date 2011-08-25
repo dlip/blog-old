@@ -7,6 +7,11 @@
   <body>
     <h1>{{ page.title }}</h1>
 
-    {{ content }}
+    <p>{{ content }}</p>
+    <p>
+      <a href="{{ page.url }}#disqus_thread">View Comments</a>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="http://disqus.com/forums/lipscombe/embed.js"></script>
+    </p>
   </body>
 </html>
