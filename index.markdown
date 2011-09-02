@@ -1,12 +1,12 @@
 ---
 layout: blog                   
-title: Dane's Blog
+title: Blog
 ---
 <p>
   {% for post in site.posts limit:5 %}
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.content }}
+    <div>{{ post.content | strip_html | truncatewords: 75 }}</div>
     <em>Posted on {{ post.date | date_to_long_string }}.</em>
-    <a href="{{ post.url }}#disqus_thread">View Comments</a>
+    <div data-disqus-identifier="{{ post.url }}"><a href="{{ post.url }}#disqus_thread">View Comments</a></div>
   {% endfor %}
 </p>

@@ -9,3 +9,18 @@
 #logo {
   text-align: center;
 }
+
+#menu {
+  text-align: center;
+  margin-left: 300px;
+}
+
+.menu-item {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#content {
+  clear: both;
+}
